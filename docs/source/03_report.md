@@ -21,7 +21,7 @@ The star symbol next to the report link indicates if the report is featured.
 
 To view a report, click on the link.  The [report will open](#report-page) in a new browser tab.
 
-### Report Filters
+## Report Filters
 
 ![](../img/reports_search.png)
 
@@ -35,7 +35,7 @@ Select `Shared` to view only the reports shared with your account.
 
 Select `Featured` to view only the reports featured as signals of interest.
 
-## Report Page
+# Report Page
 
 The contents of a report are shown on this page.  You can access these pages without signing in if the report you are 
 accessing is set to public display.  If you are unable to access a report, try logging in first.  If you cannot access 
@@ -56,9 +56,9 @@ This table describes the fields of the report:
 |Timings             |The start and end of the report window, the time of the event origin, and the times of creation and last update of the report. |
 |Permissions         |Owner of the report, if the report is viewable by anyone, and if the report is featured. |
 |Shared With         |The users who have the same permissions as the owner of the report. |
-|Additional Products |Includes the [Data Window](https://github.com/RedVoxInc/datawindow-examples) used to create the report, a .json report summary, and visualizations of the data. [More information here](#additional-products). |
+|Additional Products |Includes the [Data Window](https://github.com/RedVoxInc/datawindow-examples) used to create the report, a .json report summary, and visualizations of the data. [More information here](03_report.md#additional-products). |
 |Additional Links    |Links to outside resources for the event of interest. |
-|Report Actions      |Click on the [Edit Report](#edit-report) button to access options to edit the above fields, add more data products, or redo the report. |
+|Report Actions      |Click on the [Edit Report](03_report.md#edit-report) button to access options to edit the above fields, add more data products, or redo the report. |
 |Report Map          |To the right of the report fields is a map showing the event of interest's location and the location of each station. |
 
 ![](../img/report_bottom.png)
@@ -82,7 +82,7 @@ This table describes the visualization products:
 
 * _Some state of health metrics may not be available for older reports._
 
-### Additional Products
+## Additional Products
 
 This table describes the additional products:
 
@@ -96,7 +96,9 @@ This table describes the additional products:
 * _Some reports may not have any ML classifications.  There are several ML classifications of interest, and reports 
 may contain more than one .csv file._
 
-### Edit Report
+* _You can view the ML classification files using the [YAMNet example](https://redvoxinc.github.io/redvox-examples/06_get_yamnet_classifications.html)._
+
+## Edit Report
 
 If you own a report, you may edit it.  Click the `Edit Report` button at the bottom of the report summary.
 
@@ -118,10 +120,10 @@ The Report Actions box will expand with more options described in the table belo
 |---------------------|--------------|
 |Save                 |Saves all changes. |
 |Copy                 |Creates another report that's an exact copy of the current report. |
-|Spect                |Creates spectrograms of the audio data. |
+|Spect                |Creates spectrograms of the data. |
 |Small Arms Detection |Run the Small Arms Detection ML on the data. |
-|YamNet ML            |Run the YamNet ML generic classifier on the data. |
-|YamNet ML Lite       |Run the YamNet ML generic classifier TF-lite version on the data. |
+|YamNet ML            |Run the YAMNet ML generic classifier on the data. |
+|YamNet ML Lite       |Run the YAMNet ML generic classifier TF-lite version on the data. |
 |Explosion ML         |Run the Explosion ML classifier on the data. |
 |Explosion ML Lite    |Run the Explosion ML classifier using TF-lite on the data. |
 |Ignition ML          |Run the Ignition ML classifier on the data. |
@@ -132,5 +134,8 @@ The Report Actions box will expand with more options described in the table belo
 |Redo                 |Returns you to the dashboard to change the report parameters.  Will create a new report. |
 |Cancel               |Cancels any edits and returns you to the display view. |
 |Delete               |Permanently removes the report. |
+
+* _When creating spectrograms or running ML classifications, a message will appear prompting you to wait for the process
+to finish.  If the report page does not update, refresh it._
 
 * _More information about TF-lite available at [tensorflow.org/lite](https://www.tensorflow.org/lite)._ 

@@ -9,7 +9,7 @@ If you have not [signed in](01_account.md#log-into-your-account) yet, you will n
 The dashboard is used to select a segment of time and a number of stations to get data or create a report of a signal 
 of interest.  We will step through the various options available to you.
 
-### Time Selection
+## Time Selection
 
 ![](../img/dashboard_time.png)
 
@@ -30,7 +30,7 @@ the before and after sections.  The default amount of time to add is 5 minutes a
 Absolute time requires both the start and end times of the segment to be entered.  The default end time is 5 minutes 
 after the start time.  The start time defaults to 5 minutes before the current time.
 
-### Source Location Selection 
+## Source Location Selection 
 
 ![](../img/dashboard_loc.png)
 
@@ -54,7 +54,7 @@ will do nothing if your browser cannot access your location data.
 You can edit the source location by clicking on the bullseye icon in the search box.  Radius is in meters and refers to 
 the area around the source location to select stations from.  Click `Apply` to set the location.
 
-### Station Selection
+## Station Selection
 
 ![](../img/dashboard_stations.png)
 
@@ -78,7 +78,7 @@ You may also use one of the two options under the map display.
   selected.  If a station within the selection is already selected, it will be unselected.  Refer to the previous entry 
   for precautions with previously selected stations.
 
-#### Filtering Displayed Stations
+### Filtering Displayed Stations
 
 You have several options when filtering which stations to choose from.
 
@@ -131,7 +131,7 @@ source location.  All stations within the circle will be selected if they previo
 limit which stations are included in the final report or data download.  Stations selected but are outside the circle 
 will not be included.
 
-### Filter Profiles
+## Filter Profiles
 
 ![](../img/filter_profiles.png)
 
@@ -141,7 +141,7 @@ then click the `Add Filter` button.
 You can load existing filter profiles by clicking on the dropdown icon.  Left click on the name of the profile you want
 to load.  You can also remove profiles by clicking on the trashcan icon next to the name.
 
-#### Displaying Station Information
+### Displaying Station Information
 
 You have the option to change which information from each station is displayed to you.
 
