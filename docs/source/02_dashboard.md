@@ -30,6 +30,9 @@ the before and after sections.  The default amount of time to add is 5 minutes a
 Absolute time requires both the start and end times of the segment to be entered.  The default end time is 5 minutes 
 after the start time.  The start time defaults to 5 minutes before the current time.
 
+* _Be patient when changing the time values.  The website may require a moment to update the station list for your time
+window._
+
 ## Source Location Selection 
 
 ![](../img/dashboard_loc.png)
@@ -51,8 +54,8 @@ will do nothing if your browser cannot access your location data.
 
 ![](../img/source_loc_filter.png)
 
-You can edit the source location by clicking on the bullseye icon in the search box.  Radius is in meters and refers to 
-the area around the source location to select stations from.  Click `Apply` to set the location.
+You can edit the source location by clicking on the target icon in the search box.  Radius is in kilometers and allows 
+you to filter only stations that appear in that radius from the source location.  Click `Apply` to set the location.
 
 ## Station Selection
 
@@ -65,22 +68,34 @@ There are a few ways to select stations:
 
 ![](../img/station_select.png)
 
-The first is to select a station by clicking on the checkbox to the left of the station ID.
+The first is to select a station by clicking on the checkbox to the left of the station ID.  A selected station looks 
+like this:
+
+![](../img/selected_station.png)
 
 You may also use one of the two options under the map display.
 
 * `Station Select (Rectangular)`: Left-click and drag to create a rectangle.  All stations within the rectangle will be 
   selected.  If a station within the selection is already selected, it will be unselected.  We recommend clearing any
-  previous selection by clicking the minus sign in the checkbox on the left of the station selection widget.  If 
-  stations are selected, the top of the widget will look like this: ![](../img/stations_selected.png)
+  previous selection by clicking the minus sign in the checkbox on the left of the Stations widget (noted with an arrow 
+  in the image).  If stations are selected, the top of the widget will list how many are selected.
+  ![](../img/stations_selected.png)
 
 * `Station Select (Circular)`: Left-click and drag to create a circle.  All stations within the circle will be
   selected.  If a station within the selection is already selected, it will be unselected.  Refer to the previous entry 
   for precautions with previously selected stations.
 
+![](../img/stations_selected_map.png)
+
+* _Selected stations are marked on the map by a red dot in the center of the icon.  In this example, three stations are 
+  selected_
+
 ### Filtering Displayed Stations
 
 You have several options when filtering which stations to choose from.
+
+* _Note that filtering the displayed stations will not affect which stations are selected.  You may not see a selected
+  station in the display, but it will still be selected._
 
 ![](../img/stations_search.png)
 
@@ -127,9 +142,11 @@ choices one at a time until you are satisfied with the results._
 ![](../img/select_radius.png)
 
 The `Source Location Filter` box under the map allows you to left-click and drag to create a circle centered on the
-source location.  All stations within the circle will be selected if they previously were selected.  This option will 
-limit which stations are included in the final report or data download.  Stations selected but are outside the circle 
-will not be included.
+source location.  Any stations within the circle will appear in the station list.
+
+* _You can also perform this function by using the target icon in the station widget._
+
+* _You can still select any station using the map by clicking on an icon._
 
 ## Filter Profiles
 
@@ -138,7 +155,7 @@ will not be included.
 You can save the current filter profile by clicking on the disk icon.  Enter a descriptive name for the new profile, 
 then click the `Add Filter` button.
 
-You can load existing filter profiles by clicking on the dropdown icon.  Left click on the name of the profile you want
+You can load existing filter profiles by clicking on the dropdown icon.  Left-click on the name of the profile you want
 to load.  You can also remove profiles by clicking on the trashcan icon next to the name.
 
 ### Displaying Station Information
@@ -152,13 +169,29 @@ You have the option to change which information from each station is displayed t
 Click the three vertical lines to display the station column filters.  Select which column(s) you would like to be
 displayed when searching for stations.  The default options are displayed in the screenshot.
 
+### Changing the Dashboard Appearance
+
+![](../img/dashboard_middle.png)
+
+You can change the size of the map and search widgets by left-clicking and dragging the gray bar between the two 
+widgets.
+
+![](../img/dashboard_collapse.png)
+
+You can collapse and expand the search widgets by clicking on the double arrow icon in the upper left of the widget. 
+
 ## Generate Report
 
 ![](../img/generate_report.png)
 
 Click the `Generate Report for Selected` button to create a report for the selected data.  There is a progress bar 
 indicating how far along the process has gone.  Longer segments of data will take longer to process, so please be 
-patient.  Once the report has been generated, you can click on the link that appears to view the report.
+patient.  
+
+![](../img/report_made.png)
+
+Once the report has been generated, you can click on the link that appears in the green `Report Available` box to view 
+the report.
 
 More information about reports is available [here](03_report.md)
 

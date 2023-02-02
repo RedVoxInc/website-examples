@@ -2,6 +2,6 @@
 
 Refer to this page for common fixes to problems using the website.
 
-## If All Else Fails
+## Contact Support
 
-Contact [RedVox support](mailto:support@redvox.io).
+Contact [RedVox support](mailto:support@redvox.io) at `support@redvox.io`.

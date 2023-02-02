@@ -40,7 +40,7 @@ Click the `Sign Out` button in the upper right.
 ![](../img/sign_out_btn.png)
 
 _Please note that email addresses in our example screenshots will be partially censored for security purposes.  Your
-screens will have the full email address associated with your account displayed._
+screen will have the full email address associated with your account displayed._
 
 ## Account
 
@@ -63,4 +63,5 @@ instructions will be sent to the email address you entered and the page will upd
 
 ## Troubleshooting
 
-For any issue not covered in this tutorial, contact [RedVox support](mailto:support@redvox.io) for assistance.
+For any issue not covered in this tutorial, contact [RedVox support](mailto:support@redvox.io) at `support@redvox.io` 
+for assistance.

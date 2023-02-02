@@ -2,6 +2,8 @@
 
 This tutorial covers the report search page and the report display page.
 
+## Report Search
+
 If you have not [signed in](01_account.md#log-into-your-account) yet, you will not be able to access this page.
 
 ![](../img/reports_page.png)
@@ -21,7 +23,7 @@ The star symbol next to the report link indicates if the report is featured.
 
 To view a report, click on the link.  The [report will open](#report-page) in a new browser tab.
 
-## Report Filters
+### Report Filters
 
 ![](../img/reports_search.png)
 
@@ -31,16 +33,18 @@ Type in the search bar to filter by title.  Only reports with the entered keywor
 
 Select `My Reports` to view only the reports you have made.
 
-Select `Shared` to view only the reports shared with your account.
+Select `Shared With Me` to view only the reports shared with your account.
+
+Select `Shared With Others` to view only the reports you have shared.
 
 Select `Featured` to view only the reports featured as signals of interest.
 
-# Report Page
+## Report Page
 
 The contents of a report are shown on this page.  You can access these pages without signing in if the report you are 
 accessing is set to public display.  If you are unable to access a report, try logging in first.  If you cannot access 
 a report and are logged in, check that the account you are using has access to the report.  As a last resort, contact 
-[RedVox support](mailto:support@redvox.io).
+[RedVox support](mailto:support@redvox.io) at `support@redvox.io`.
 
 ![](../img/report_display.png)
 
@@ -133,7 +137,7 @@ The Report Actions box will expand with more options described in the table belo
 |Extract Edge ML      |Retrieve the ML classifier data from the stations. |
 |Redo                 |Returns you to the dashboard to change the report parameters.  Will create a new report. |
 |Cancel               |Cancels any edits and returns you to the display view. |
-|Delete               |Permanently removes the report. |
+|Delete               |Permanently removes the report.  A prompt will appear asking you to confirm deletion.  Click `Delete Report` to delete the report.  You will be returned to the report search page. |
 
 * _When creating spectrograms or running ML classifications, a message will appear prompting you to wait for the process
 to finish.  If the report page does not update, refresh it._
