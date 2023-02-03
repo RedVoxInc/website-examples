@@ -140,6 +140,6 @@ The Report Actions box will expand with more options described in the table belo
 |Delete               |Permanently removes the report.  A prompt will appear asking you to confirm deletion.  Click `Delete Report` to delete the report.  You will be returned to the report search page. |
 
 * _When creating spectrograms or running ML classifications, a message will appear prompting you to wait for the process
-to finish.  If the report page does not update, refresh it._
+to finish.  Refresh the page when the prompt directs you to view the product._
 
 * _More information about TF-lite available at [tensorflow.org/lite](https://www.tensorflow.org/lite)._ 
