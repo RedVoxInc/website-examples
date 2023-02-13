@@ -169,6 +169,13 @@ You have the option to change which information from each station is displayed t
 Click the three vertical lines to display the station column filters.  Select which column(s) you would like to be
 displayed when searching for stations.  The default options are displayed in the screenshot.
 
+You can sort the displayed columns by clicking on the title of the column.
+
+![](../img/rows_per_page.png)
+
+You can change the number of rows displayed per page by clicking on the downward arrow next to `Rows per page` below 
+the station information.
+
 ### Changing the Dashboard Appearance
 
 ![](../img/dashboard_middle.png)
