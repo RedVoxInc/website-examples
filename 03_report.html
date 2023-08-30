@@ -1,0 +1,533 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="What to do next?" href="what_to_do_next.html" /><link rel="prev" title="Dashboard" href="02_dashboard.html" />
+
+    <link rel="shortcut icon" href="_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
+        <title>Report - RedVox Website Examples</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">RedVox Website Examples</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/redvox_logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">RedVox Website Examples</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Before Starting...</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prereqs.html">Prerequisites</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">redvox.io...</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00_redvox_website.html">RedVox Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_account.html">Redvox Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_dashboard.html">Dashboard</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Report</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For more information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="what_to_do_next.html">What to do next?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="section" id="report">
+<h1>Report<a class="headerlink" href="#report" title="Permalink to this headline">#</a></h1>
+<p>This tutorial covers the report search page and the report display page.</p>
+<div class="section" id="report-search">
+<h2>Report Search<a class="headerlink" href="#report-search" title="Permalink to this headline">#</a></h2>
+<p>If you have not <a class="reference internal" href="01_account.html#log-into-your-account"><span class="std std-ref">signed in</span></a> yet, you will not be able to access this page.</p>
+<p><img alt="" src="_images/reports_page.png"/></p>
+<p>This page lists all the reports available to you.  Reports are segments of data from one or more stations compiled
+together around an event of interest.  They are the easiest way to view RedVox data.</p>
+<p>Each report is accessed through a link with the username of report’s creator, followed by the @ sign, then the datetime
+of report creation.  Older or legacy reports will have a series of numbers and letters instead.  Below the link is the
+report title, which usually gives a brief description of the report.  By default, report titles are the datetime of the
+event of interest followed by the duration of the report window, followed by the number of stations in the report.</p>
+<p>The lock symbol next to the report link indicates if a report is public or private.  Private reports can only be seen
+by the owners.</p>
+<p>The star symbol next to the report link indicates if the report is featured.</p>
+<p>To view a report, click on the link.  The <a class="reference internal" href="#report-page">report will open</a> in a new browser tab.</p>
+<div class="section" id="report-filters">
+<h3>Report Filters<a class="headerlink" href="#report-filters" title="Permalink to this headline">#</a></h3>
+<p><img alt="" src="_images/reports_search.png"/></p>
+<p>Type in the search bar to filter by title.  Only reports with the entered keywords in their title will appear.</p>
+<p><img alt="" src="_images/search_buttons.png"/></p>
+<p>Select <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Reports</span></code> to view only the reports you have made.</p>
+<p>Select <code class="docutils literal notranslate"><span class="pre">Shared</span> <span class="pre">With</span> <span class="pre">Me</span></code> to view only the reports shared with your account.</p>
+<p>Select <code class="docutils literal notranslate"><span class="pre">Shared</span> <span class="pre">With</span> <span class="pre">Others</span></code> to view only the reports you have shared.</p>
+<p>Select <code class="docutils literal notranslate"><span class="pre">Featured</span></code> to view only the reports featured as signals of interest.</p>
+</div>
+</div>
+<div class="section" id="report-page">
+<h2>Report Page<a class="headerlink" href="#report-page" title="Permalink to this headline">#</a></h2>
+<p>The contents of a report are shown on this page.  You can access these pages without signing in if the report you are
+accessing is set to public display.  If you are unable to access a report, try logging in first.  If you cannot access
+a report and are logged in, check that the account you are using has access to the report.  As a last resort, contact
+<a class="reference external" href="mailto:support%40redvox.io">RedVox support</a> at <code class="docutils literal notranslate"><span class="pre">support@redvox.io</span></code>.</p>
+<p><img alt="" src="_images/report_display.png"/></p>
+<p>This table describes the fields of the report:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Title</p></td>
+<td><p>Title of the report that typically consists of an event of interest, the time of the event, the window duration, and the number of stations.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Description</p></td>
+<td><p>A short description of the event of interest.</p></td>
+</tr>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>The identifier to the report.  Consists of the report creator’s username and the date of report creation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Alias</p></td>
+<td><p>A shortened alias link to the report.  Useful for sending a link to others without taking up a lot of space.</p></td>
+</tr>
+<tr class="row-even"><td><p>Origin Location</p></td>
+<td><p>The coordinates of the event of interest.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Timings</p></td>
+<td><p>The start and end of the report window, the time of the event origin, and the times of creation and last update of the report.</p></td>
+</tr>
+<tr class="row-even"><td><p>Permissions</p></td>
+<td><p>Owner of the report, if the report is viewable by anyone, and if the report is featured.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Shared With</p></td>
+<td><p>The users who have the same permissions as the owner of the report.</p></td>
+</tr>
+<tr class="row-even"><td><p>Additional Products</p></td>
+<td><p>Includes the <a class="reference external" href="https://github.com/RedVoxInc/datawindow-examples">Data Window</a> used to create the report, a .json report summary, and visualizations of the data. <a class="reference internal" href="#additional-products"><span class="std std-ref">More information here</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Additional Links</p></td>
+<td><p>Links to outside resources for the event of interest.</p></td>
+</tr>
+<tr class="row-even"><td><p>Report Actions</p></td>
+<td><p>Click on the <a class="reference internal" href="#edit-report"><span class="std std-ref">Edit Report</span></a> button to access options to edit the above fields, add more data products, or redo the report.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Report Map</p></td>
+<td><p>To the right of the report fields is a map showing the event of interest’s location and the location of each station.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><img alt="" src="_images/report_bottom.png"/></p>
+<p>Below the report summary are the data visualization products for sensors and state of health.</p>
+<p>This table describes the visualization products:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Product Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Group Products</p></td>
+<td><p>Data is displayed per sensor across all stations.  Default display.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Individual Products</p></td>
+<td><p>Data is displayed per sensor per station.</p></td>
+</tr>
+<tr class="row-even"><td><p>Power State</p></td>
+<td><p>Displays the power state of each station.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cell Service</p></td>
+<td><p>Displays the cellular service state of each station.</p></td>
+</tr>
+<tr class="row-even"><td><p>Battery</p></td>
+<td><p>Displays the battery percent remaining of each station.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Current</p></td>
+<td><p>Displays the battery current in microamperes of each station.</p></td>
+</tr>
+<tr class="row-even"><td><p>Temperature</p></td>
+<td><p>Displays the temperature in Celsius of each station.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Net. Type</p></td>
+<td><p>Displays the network type of each station.</p></td>
+</tr>
+<tr class="row-even"><td><p>Net. Strength</p></td>
+<td><p>Displays the network strength in decibels of each station.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ram</p></td>
+<td><p>Displays the amount of RAM available of each station.</p></td>
+</tr>
+</tbody>
+</table></div>
+<ul class="simple">
+<li><p><em>Some state of health metrics may not be available for older reports.</em></p></li>
+</ul>
+</div>
+<div class="section" id="additional-products">
+<h2>Additional Products<a class="headerlink" href="#additional-products" title="Permalink to this headline">#</a></h2>
+<p>This table describes the additional products:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Product Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Data Window</p></td>
+<td><p>Listed as <code class="docutils literal notranslate"><span class="pre">Time</span> <span class="pre">aligned</span> <span class="pre">and</span> <span class="pre">corrected</span> <span class="pre">data</span> <span class="pre">window</span></code>; this is the <a class="reference external" href="https://github.com/RedVoxInc/datawindow-examples">Data Window</a> used to create the report. If you want to dig into the data, use this.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Report Summary</p></td>
+<td><p>Listed as <code class="docutils literal notranslate"><span class="pre">Structured</span> <span class="pre">report</span> <span class="pre">summary</span> <span class="pre">(.json)</span></code>; this is a .json file containing the summary report.  Use this to view a quick overview of the report.</p></td>
+</tr>
+<tr class="row-even"><td><p>Station locations</p></td>
+<td><p>Listed as <code class="docutils literal notranslate"><span class="pre">Station</span> <span class="pre">locations</span> <span class="pre">(.kml)</span></code>; this is a .kml file that contains the locations of all the stations in the report.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ML Classification</p></td>
+<td><p>Listed as <code class="docutils literal notranslate"><span class="pre">*EVENT</span> <span class="pre">CLASS*</span> <span class="pre">classification</span> <span class="pre">timeline</span> <span class="pre">(.csv)</span></code>; this is a .csv file of the machine learning classifications for a particular type of event denoted by <code class="docutils literal notranslate"><span class="pre">*EVENT</span> <span class="pre">CLASS*</span></code>.</p></td>
+</tr>
+</tbody>
+</table></div>
+<ul class="simple">
+<li><p><em>Some reports may not have any ML classifications.  There are several ML classifications of interest, and reports
+may contain more than one .csv file.</em></p></li>
+<li><p><em>You can view the ML classification files using the <a class="reference external" href="https://redvoxinc.github.io/redvox-examples/06_get_yamnet_classifications.html">YAMNet example</a>.</em></p></li>
+</ul>
+</div>
+<div class="section" id="edit-report">
+<h2>Edit Report<a class="headerlink" href="#edit-report" title="Permalink to this headline">#</a></h2>
+<p>If you own a report, you may edit it.  Click the <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Report</span></code> button at the bottom of the report summary.</p>
+<p>You will be able to edit:</p>
+<ol class="arabic simple">
+<li><p>Report title</p></li>
+<li><p>Description</p></li>
+<li><p>Alias link (we do not recommend changing this)</p></li>
+<li><p>Public and featured tags</p></li>
+<li><p>Which accounts the report is shared with</p></li>
+<li><p>Additional URLs</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>When editing the shared accounts and additional URLs, you must click the green plus button to add the value and the
+red x to remove them.  If you do not use those buttons, your changes will not be saved.</em></p></li>
+<li><p><em>When editing the additional URLs, you may include a description to display instead of the actual link text.</em></p></li>
+</ul>
+<p>The Report Actions box will expand with more options described in the table below:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Option</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Save</p></td>
+<td><p>Saves all changes.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Copy</p></td>
+<td><p>Creates another report that’s an exact copy of the current report.</p></td>
+</tr>
+<tr class="row-even"><td><p>Spect</p></td>
+<td><p>Creates spectrograms of the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Small Arms Detection</p></td>
+<td><p>Run the Small Arms Detection ML on the data.</p></td>
+</tr>
+<tr class="row-even"><td><p>YamNet ML</p></td>
+<td><p>Run the YAMNet ML generic classifier on the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p>YamNet ML Lite</p></td>
+<td><p>Run the YAMNet ML generic classifier TF-lite version on the data.</p></td>
+</tr>
+<tr class="row-even"><td><p>Explosion ML</p></td>
+<td><p>Run the Explosion ML classifier on the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Explosion ML Lite</p></td>
+<td><p>Run the Explosion ML classifier using TF-lite on the data.</p></td>
+</tr>
+<tr class="row-even"><td><p>Ignition ML</p></td>
+<td><p>Run the Ignition ML classifier on the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ignition ML Lite</p></td>
+<td><p>Run the Ignition ML classifier TF-lite version on the data.</p></td>
+</tr>
+<tr class="row-even"><td><p>Rocket ML</p></td>
+<td><p>Run the Rocket ML classifier on the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rocket ML Lite</p></td>
+<td><p>Run the Rocket ML classifier TF-lite version on the data.</p></td>
+</tr>
+<tr class="row-even"><td><p>Extract Edge ML</p></td>
+<td><p>Retrieve the ML classifier data from the stations.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Redo</p></td>
+<td><p>Returns you to the dashboard to change the report parameters.  Will create a new report.</p></td>
+</tr>
+<tr class="row-even"><td><p>Cancel</p></td>
+<td><p>Cancels any edits and returns you to the display view.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Delete</p></td>
+<td><p>Permanently removes the report.  A prompt will appear asking you to confirm deletion.  Click <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">Report</span></code> to delete the report.  You will be returned to the report search page.</p></td>
+</tr>
+</tbody>
+</table></div>
+<ul class="simple">
+<li><p><em>When creating spectrograms or running ML classifications, a message will appear prompting you to wait for the process
+to finish.  Refresh the page when the prompt directs you to view the product.</em></p></li>
+<li><p><em>More information about TF-lite available at <a class="reference external" href="https://www.tensorflow.org/lite">tensorflow.org/lite</a>.</em></p></li>
+</ul>
+</div>
+</div>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="what_to_do_next.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">What to do next?</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="02_dashboard.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Dashboard</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, RedVox, Inc.
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/RedVoxInc/website-examples" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Report</a><ul>
+<li><a class="reference internal" href="#report-search">Report Search</a><ul>
+<li><a class="reference internal" href="#report-filters">Report Filters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#report-page">Report Page</a></li>
+<li><a class="reference internal" href="#additional-products">Additional Products</a></li>
+<li><a class="reference internal" href="#edit-report">Edit Report</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>
