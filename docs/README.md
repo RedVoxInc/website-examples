@@ -37,4 +37,3 @@ Once you are done with your changes, open a terminal with a python environment, 
 ```
 
 To view the docs in a browser, go to website-examples/docs/build/html and open `index.html` in a browser.
-
