@@ -2,8 +2,7 @@
 
 This repository is for tutorials and examples for the Redvox website; [redvox.io](https://redvox.io/#/home)
 
-* View the Website Documentation
-* View the docs hosted on Github
+* View the [Website Documentation](https://redvoxinc.github.io/website-examples/)
 
 ## Contributors
 
