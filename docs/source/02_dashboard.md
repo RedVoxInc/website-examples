@@ -115,24 +115,24 @@ need to scroll the filter selection box if the button does not appear.
 The table below describes each option and gives a general idea of what values to expect.  The default option of all 
 options is to not filter on the field.
 
-|Field Name               |Type of Widget |Description   |
-|-------------------------|---------------|--------------|
-|Station ID               |Text box       |Fill in part or all of the Station ID to filter on.  Station IDs are typically numerical. |
-|API                      |Checkbox       |Choose which version of API to filter on. |
-|Additional Sensors       |Checkbox       |Choose one or more non-audio sensors required to be active on the Station. |
-|App Version              |Dropdown       |Choose one of the App versions required to be running on the Station.  Note that there are options for both Android and iOS operating systems. |
-|Audio Samples per Packet |Checkbox       |Choose one or more samples per packet to filter on. |
-|Audio Sampling Rate      |Checkbox       |Choose one or more samples per second to filter on. |
-|Enhanced Timing          |Dropdown       |Choose one to filter for stations synched to a time server, not synched to a time server, or all of the data. |
-|Make                     |Checkbox       |Choose one or more Make of stations to filter on. |
-|Model                    |Checkbox       |Choose one or more Model of the stations to filter on. |
-|OS                       |Checkbox       |Choose one or more OS of the stations to filter on. |
-|OS Version               |Checkbox       |Choose one or more OS Version of the stations to filter on. |
-|Private                  |Dropdown       |Choose one to filter for private, not private, or all of the data. |
-|Source Dist.             |Checkbox       |Choose one or more distance to source location.  Requires you to choose a source location first. |
-|Station UUID             |Checkbox       |Choose one or more Station UUID to filter on. |
-|Timing Latency           |Checkbox       |Choose one or more time sync server latencies of the stations to filter on. |
-|sub-API                  |Checkbox       |Choose which sub-API version to filter on. |
+| Field Name               | Type of Widget | Description                                                                                                                                    |
+|--------------------------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| Station ID               | Text box       | Fill in part or all of the Station ID to filter on.  Station IDs are typically numerical.                                                      |
+| API                      | Checkbox       | Choose which version of API to filter on.                                                                                                      |
+| Additional Sensors       | Checkbox       | Choose one or more non-audio sensors required to be active on the Station.                                                                     |
+| App Version              | Dropdown       | Choose one of the App versions required to be running on the Station.  Note that there are options for both Android and iOS operating systems. |
+| Audio Samples per Packet | Checkbox       | Choose one or more samples per packet to filter on.                                                                                            |
+| Audio Sampling Rate      | Checkbox       | Choose one or more samples per second to filter on.                                                                                            |
+| Enhanced Timing          | Dropdown       | Choose one to filter for stations synced to a time server, not synced to a time server, or all of the data.                                    |
+| Make                     | Checkbox       | Choose one or more Make of stations to filter on.                                                                                              |
+| Model                    | Checkbox       | Choose one or more Model of the stations to filter on.                                                                                         |
+| OS                       | Checkbox       | Choose one or more OS of the stations to filter on.                                                                                            |
+| OS Version               | Checkbox       | Choose one or more OS Version of the stations to filter on.                                                                                    |
+| Private                  | Dropdown       | Choose one to filter for private, not private, or all of the data.                                                                             |
+| Source Dist.             | Checkbox       | Choose one or more distance to source location.  Requires you to choose a source location first.                                               |
+| Station UUID             | Checkbox       | Choose one or more Station UUID to filter on.                                                                                                  |
+| Timing Latency           | Checkbox       | Choose one or more time sync server latencies of the stations to filter on.                                                                    |
+| sub-API                  | Checkbox       | Choose which sub-API version to filter on.                                                                                                     |
 
 * _Remember to press the `Apply Filters` button at the bottom to confirm your choices._
 
